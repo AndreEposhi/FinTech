@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.TaxaJuros.Api", "FinTech.TaxaJuros.Api\FinTech.TaxaJuros.Api.csproj", "{392897A7-CDEB-478B-93FF-0B909875B504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.CalculaJuros.Api", "FinTech.CalculaJuros.Api\FinTech.CalculaJuros.Api.csproj", "{CF188608-6241-4DAC-AA3E-821EA58A0DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.TaxaJuros.Api.Test", "FinTech.TaxaJuros.Api.Test\FinTech.TaxaJuros.Api.Test.csproj", "{C66C27F5-1769-4E8D-AB3C-A19638BEB574}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{3D779BAE-1D03-4476-AC71-DCCAE77D7895}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CB595EB5-0836-408F-8B91-D286F775C788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.CalculaJuros.Api.Test", "FinTech.CalculaJuros.Api.Test\FinTech.CalculaJuros.Api.Test.csproj", "{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{392897A7-CDEB-478B-93FF-0B909875B504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392897A7-CDEB-478B-93FF-0B909875B504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392897A7-CDEB-478B-93FF-0B909875B504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392897A7-CDEB-478B-93FF-0B909875B504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF188608-6241-4DAC-AA3E-821EA58A0DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF188608-6241-4DAC-AA3E-821EA58A0DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF188608-6241-4DAC-AA3E-821EA58A0DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF188608-6241-4DAC-AA3E-821EA58A0DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66C27F5-1769-4E8D-AB3C-A19638BEB574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66C27F5-1769-4E8D-AB3C-A19638BEB574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66C27F5-1769-4E8D-AB3C-A19638BEB574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66C27F5-1769-4E8D-AB3C-A19638BEB574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{392897A7-CDEB-478B-93FF-0B909875B504} = {3D779BAE-1D03-4476-AC71-DCCAE77D7895}
+		{CF188608-6241-4DAC-AA3E-821EA58A0DF4} = {3D779BAE-1D03-4476-AC71-DCCAE77D7895}
+		{C66C27F5-1769-4E8D-AB3C-A19638BEB574} = {CB595EB5-0836-408F-8B91-D286F775C788}
+		{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41} = {CB595EB5-0836-408F-8B91-D286F775C788}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9333DF2-2DB1-4D53-B345-19B42497CF66}
+	EndGlobalSection
+EndGlobal
