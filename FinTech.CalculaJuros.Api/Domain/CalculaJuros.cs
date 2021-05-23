@@ -21,6 +21,7 @@ namespace FinTech.CalculaJuros.Api.Domain
                 throw new ArgumentException("Quantidade de meses deve ser maior do que zero.");
 
             var taxaJuros = _taxaJurosService.ObterTaxaDeJuros();
+
             return Math.Round(Convert.ToDouble(valorASerCalculado) * Math.Pow(taxaJuros + 1, Convert.ToDouble(meses)), 2);
         }
     }
