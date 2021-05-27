@@ -1,12 +1,17 @@
-﻿using System.Threading.Tasks;
+﻿using FinTech.CalculaJuros.Api.Configurations;
 
 namespace FinTech.CalculaJuros.Api.Domain
 {
-    public class Code
+    public class Code : ICode
     {
-        const string LINK_GITHUB_CODIGOFONTE = "https://github.com/AndreEposhi/FinTech";
+        private readonly IAppSettings _appSettings;
+
+        public Code(IAppSettings appSettings)
+        {
+            _appSettings = appSettings;
+        }
 
         public string RetornarLinkDoGitHubDoCodigoFonte()
-            => LINK_GITHUB_CODIGOFONTE;
+            => _appSettings.ObterLinkDoGithubDoCodigoFonte();
     }
 }
