@@ -1,3 +1,4 @@
+using FinTech.CalculaJuros.Api.Configurations;
 using FinTech.CalculaJuros.Api.Filters;
 using FinTech.CalculaJuros.Api.Services;
 using Microsoft.AspNetCore.Builder;
@@ -47,8 +48,9 @@ namespace FinTech.CalculaJuros.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Registrar os serviços
+            //Resolver dependências
             services.AddScoped<ITaxaJurosService, TaxaJurosService>();
+            services.AddScoped<IAppSettings, AppSettings>();
 
             services.AddControllers(option => 
             {

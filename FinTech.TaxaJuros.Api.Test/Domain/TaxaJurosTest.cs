@@ -17,10 +17,12 @@ namespace FinTech.TaxaJuros.Api.Test.Domain
             Assert.AreEqual(jurosEsperado, jurosAtual);
         }
 
-        [Test]
-        public void Nao_Deve_Obter_Taxa_De_Juros_Diferente_De_Um_Porcento()
+        [TestCase(0.02d)]
+        [TestCase(0.03d)]
+        [TestCase(0.04d)]
+        [TestCase(0.05d)]
+        public void Nao_Deve_Obter_Taxa_De_Juros_Diferente_De_Um_Porcento(decimal jurosEsperado)
         {
-            var jurosEsperado = 0.02d;
             var jurosAtual = 0d;
 
             var juros = new Api.Domain.TaxaJuros();

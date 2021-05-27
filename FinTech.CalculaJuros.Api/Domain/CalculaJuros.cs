@@ -3,7 +3,7 @@ using System;
 
 namespace FinTech.CalculaJuros.Api.Domain
 {
-    public class CalculaJuros
+    public class CalculaJuros : ICalculaJuros
     {
         private readonly ITaxaJurosService _taxaJurosService;
 
