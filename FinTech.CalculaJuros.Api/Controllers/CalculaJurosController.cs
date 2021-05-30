@@ -1,4 +1,5 @@
 ﻿using FinTech.CalculaJuros.Api.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinTech.CalculaJuros.Api.Controllers
@@ -6,6 +7,7 @@ namespace FinTech.CalculaJuros.Api.Controllers
     /// <summary>
     /// Controlador responsável por calcular os juros compostos
     /// </summary>
+    [EnableCors()]
     [Route("api/calculajuros")]
     [ApiController]
     public class CalculaJurosController : ControllerBase

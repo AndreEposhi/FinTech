@@ -7,50 +7,56 @@ using Microsoft.Extensions.Hosting;
 
 namespace FinTech.TaxaJuros.Api
 {
-    public class Startup
+  public class Startup
+  {
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
     {
-        public IConfiguration Configuration { get; }
-
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api responsável por determinar a taxa de juros");
-            });
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-        }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllers(options => 
-            {
-                options.Filters.Add(typeof(CustomExceptionFilter));
-            });
-            services.AddSwaggerGen();
-        }
+      Configuration = configuration;
     }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
+
+      app.UseSwagger();
+
+      app.UseSwaggerUI(c =>
+      {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api responsï¿½vel por determinar a taxa de juros");
+      });
+
+      //app.UseHttpsRedirection();
+
+      app.UseRouting();
+
+      app.UseCors();
+
+      app.UseAuthorization();
+
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllers();
+      });
+    }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+      services.AddCors(options =>
+      {
+        options.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+      });
+      services.AddControllers(options =>
+      {
+        options.Filters.Add(typeof(CustomExceptionFilter));
+      });
+      services.AddSwaggerGen();
+    }
+  }
 }
