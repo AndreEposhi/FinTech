@@ -15,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CB595EB5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinTech.CalculaJuros.Api.Test", "FinTech.CalculaJuros.Api.Test\FinTech.CalculaJuros.Api.Test.csproj", "{E1E6A1FA-A7CF-4751-9C9A-A8E1C7547B41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.TaxaJuros.Api.IntegrationTest", "FinTech.TaxaJuros.Api.IntegrationTest\FinTech.TaxaJuros.Api.IntegrationTest.csproj", "{1378ACA1-E8B4-4F54-AB37-D01EA49D8CE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinTech.TaxaJuros.Api.IntegrationTest", "FinTech.TaxaJuros.Api.IntegrationTest\FinTech.TaxaJuros.Api.IntegrationTest.csproj", "{1378ACA1-E8B4-4F54-AB37-D01EA49D8CE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinTech.CalculaJuros.Api.IntegrationTest", "FinTech.CalculaJuros.Api.IntegrationTest\FinTech.CalculaJuros.Api.IntegrationTest.csproj", "{351319FB-3807-434C-A80B-BD30DB31274A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinTech.CalculaJuros.Api.IntegrationTest", "FinTech.CalculaJuros.Api.IntegrationTest\FinTech.CalculaJuros.Api.IntegrationTest.csproj", "{351319FB-3807-434C-A80B-BD30DB31274A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6A979DD9-A47C-4EA5-8696-4C91D34B77A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{351319FB-3807-434C-A80B-BD30DB31274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351319FB-3807-434C-A80B-BD30DB31274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351319FB-3807-434C-A80B-BD30DB31274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A979DD9-A47C-4EA5-8696-4C91D34B77A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A979DD9-A47C-4EA5-8696-4C91D34B77A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A979DD9-A47C-4EA5-8696-4C91D34B77A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A979DD9-A47C-4EA5-8696-4C91D34B77A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

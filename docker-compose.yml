@@ -1,26 +1,21 @@
-version: '3'
-
-networks:
-  backend:
+version: '3.4'
 
 services:
-  calculajuros:
+  fintech.calculajuros.api:
+    image: ${DOCKER_REGISTRY-}fintechcalculajurosapi
     build:
-      context: ./FinTech.CalculaJuros.Api
-      dockerfile: Dockerfile
-    networks:
-      - backend
+      context: .
+      dockerfile: FinTech.CalculaJuros.Api/Dockerfile
+    restart: always
     ports:
-      - 7000:80
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-  taxajuros:
+      - "6000:80" 
+
+  fintech.taxajuros.api:
+    image: ${DOCKER_REGISTRY-}fintechtaxajurosapi
     build:
-      context: ./FinTech.TaxaJuros.Api
-      dockerfile: Dockerfile
-    networks:
-      - backend
+      context: .
+      dockerfile: FinTech.TaxaJuros.Api/Dockerfile
+    restart: always
     ports:
-      - 7500:80
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - "6500:80" 
+
