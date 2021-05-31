@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  fintech.calculajuros.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "51750:80"
+
+  fintech.taxajuros.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "51747:80"
+

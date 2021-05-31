@@ -17,7 +17,8 @@ namespace FinTech.CalculaJuros.Api.Services
         public double ObterTaxaDeJuros()
         {
             var taxaJuros = 0d;
-            var request = WebRequest.CreateHttp($"{_appSettings.ObterUrlDaApiDaTaxaDeJuros()}api/taxaJuros/ObterTaxaDeJuros");
+            var urlTaxaJurosApi = _appSettings.ObterUrlDaApiDaTaxaDeJuros();
+            var request = WebRequest.CreateHttp($"{urlTaxaJurosApi}api/taxaJuros/ObterTaxaDeJuros");
             request.Method = "GET";
 
             using (var response = request.GetResponse())

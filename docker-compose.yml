@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  fintech.calculajuros.api:
+    image: ${DOCKER_REGISTRY-}fintechcalculajurosapi
+    build:
+      context: .
+      dockerfile: FinTech.CalculaJuros.Api/Dockerfile
+    restart: always
+    ports:
+      - "6000:80" 
+
+  fintech.taxajuros.api:
+    image: ${DOCKER_REGISTRY-}fintechtaxajurosapi
+    build:
+      context: .
+      dockerfile: FinTech.TaxaJuros.Api/Dockerfile
+    restart: always
+    ports:
+      - "6500:80" 
+
